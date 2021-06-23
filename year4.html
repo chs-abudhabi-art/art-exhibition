@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Year 4</title>
+        <link rel="stylesheet" href="year.css">
+    </head>
+<body>
+    <button class="tablink" onclick="openPage('4A', this, '#777A9E')" id="defaultOpen">4A</button>
+    <button class="tablink" onclick="openPage('4B', this, '#777A9E')">4B</button>
+    <button class="tablink" onclick="openPage('4C', this, '#777A9E')">4C</button>
+    <button class="tablink" onclick="openPage('4D', this, '#777A9E')">4D</button>
+    <button class="tablink" onclick="openPage('4E', this, '#777A9E')">4E</button>
+
+    <div id="4A" class="tabcontent">
+        <div class="row">
+            <div class="column">
+              
+            </div>
+            <div class="column">
+          
+            </div>
+            <div class="column">    
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        function openPage(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
